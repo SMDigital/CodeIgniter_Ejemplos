@@ -1,0 +1,533 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    border:0px;
+}
+
+#contenedorItems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedorItems li {
+    background-color:#FFF !important;
+    list-style-image:none;
+    list-style:none;
+    margin: 0;
+    padding-left: 0;
+    padding: 0;
+}
+
+#contenedorItems li span {
+    margin-left: -1.3em;
+    position: absolute;
+}
+
+#fondo{
+    height:auto;
+    margin-left:0px;
+    position:absolute;
+    width:100%;
+}
+
+#fondo .izquierda{
+    float:left;
+    height:auto;
+    margin-left:0px;
+    margin-top:0px;
+    width:auto;
+}
+
+#fondo .derecha{
+    float:right;
+    height:auto;
+    right:0px;
+    top:0px;
+    width:auto;
+}
+
+#wraper{
+    height:auto;
+    margin:auto;
+    position:relative;
+    width:980px;
+}
+
+#contenido{
+    float:left;
+    height:auto;
+    margin:auto;
+    width:100%;
+}
+
+#barraMensaje{
+    float:right;
+    height:27px;
+    width:auto;
+}
+
+#barraMensaje .izquierda{
+    background-color:#00a4e4;
+    float:left;
+    height:27px;
+    width:30px;
+}
+
+#barraMensaje .derecha{
+    background-color:#132530;
+    color:#FFF;
+    float:left;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-style:normal;
+    height:23px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:4px;
+    width:710px;
+}
+
+#barraMensaje .derecha .textoIntIzquierdo{
+    float:left;
+    text-align:left;
+    width:auto;
+}
+
+#barraMensaje .derecha .textoIntDerecho{
+    float:right;
+    text-align:right;
+    width:auto;
+}
+
+#header{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdoheader.png);
+    background-position:right top;
+    background-repeat:no-repeat;
+    height:100px;
+    margin:auto;
+    padding-top:10px;
+    width:100%;
+}
+
+#menu{
+    border-right:dashed #132530 0.02em;
+    float:left;
+    height:100%;
+    margin-left:0px;
+    width:200px;
+}
+
+#menu ul{
+    padding-left:0px;
+}
+
+#menu li{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdomenu.png);
+    background-position:bottom;
+    background-repeat:repeat-x;
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:18px;
+    height:35px;
+    list-style:none;
+    padding-left:20px;
+    padding-top:15px;
+    width:180px;
+}
+
+#menu li a{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:18px;
+    text-decoration:none;
+}
+
+#menu li a:hover{
+    color:#00a4e4;
+    text-decoration:underline;
+}
+
+#menu .tituloMenu{
+    color:#00a4e4;
+    font-size:24px;
+    padding-left:0px !important;
+    width:200px !important;
+}
+
+footer {
+    background-color:#132530;
+    float:left;
+    height:118px;
+    width:100%;
+}
+
+#areaTrabajo{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdoareat.png);
+    background-repeat:repeat;
+    float:right;
+    height:100%;
+    margin-top:10px;
+    padding:10px;
+    width:740px;
+}
+
+#login{
+    height:500px;
+    margin:auto;
+    width:460px;
+}
+
+#tituloLogin{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdomenu.png);
+    background-position:bottom;
+    background-repeat:repeat-x;
+    color:#00a4e4;
+    float:left;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:24px;
+    height:35px;
+    height:35px;
+    width:100%;
+}
+
+#divLogin{
+    color:#132530;
+    float:left;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:16px;
+    height:auto;
+}
+
+#divLogin .labelLogin{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdomenu.png);
+    background-position:bottom;
+    background-repeat:repeat-x;
+    float:left;
+    height:35px;
+    padding-top:15px;
+    width:100px;
+}
+
+#divLogin .inputLogin{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdomenu.png);
+    background-position:bottom;
+    background-repeat:repeat-x;
+    float:left;
+    height:35px;
+    padding-top:15px;
+    width:350px;
+}
+
+#divLogin .inputLogin input, .link{
+    color:#132530;
+    float:left;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width:350px;
+}
+
+.link{
+    font-size:13px;
+    margin-top:10px;
+    text-decoration:none;
+}
+
+#botonLogin input{
+    background-image:url(http://smdigital.com.co/clientes/sistema_madre/images/fdoareat.png);
+    background-repeat:repeat;
+    border:0px;
+    color:#132530;
+    cursor: pointer;
+    float:right;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin-top:10px;
+}
+
+#mensajeLogin{
+    color:#00a4e4;
+    float:left;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin-top:10px;
+}
+
+#error{
+    margin:auto;
+    width:500px;
+}
+
+#error .titulo_error, #pantallaConfirmacion .conTitulo, #pantallaConfirmacion .conPata, #tituloConfirmar{
+    color:#132530;
+    float:left;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:14px;
+    margin-bottom:10px;
+    width:100%;
+}
+
+#error .desc_error, #pantallaConfirmacion .conDescripcion, #textoConfirmar{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin-top:10px;
+    text-decoration: underline;
+    width:100%;
+}
+
+#error .desc_error{
+    color:#FF0000 !important;
+}
+
+#pantallaConfirmacion .conPata a, #textoConfirmar a{
+    color:#00a4e4;
+    text-decoration:none;
+}
+
+.tablaCotizacion{
+    height:auto;
+    padding-left:5px;
+    width:740px;
+}
+
+.tituloCotizacion{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:92px;
+}
+
+.tituloCotizacionPeq{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:45px;
+}
+
+.tituloCotizacionGra{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:110px;
+}
+
+.itemCotizacion{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:92px;
+}
+
+.itemCotizacionPeq{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:45px;
+}
+
+.itemCotizacionGra{
+    color:#132530;
+    font-family:'ITCAvantGardeGothicProMedium',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    height:26px;
+    margin-top:10px;
+    text-align:center;
+    width:110px;
+}
+
+.input_cotizacion , .input_cotizacion_select{
+    color:#132530;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width:70px;
+}
+
+.input_cotizacion_select{
+    width:200px !important;
+}
+
+.input_cotizacion_peq{
+    color:#132530;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width:30px;
+}
+
+.nologin{
+    background-image:none !important;
+}
+
+.textoResaltado{
+    color:#00a4e4;
+}
+
+.logoMarca {
+    float:left;
+    height:auto;
+    margin-left:20px;
+    margin-top:25px;
+    width:auto;
+}
+
+.menuOpc {
+    float:right;
+    height:30px;
+    margin-right:75px;
+    margin-top:30px;
+    width:110px;
+}
+
+.tituloAdministrador{
+    color:#00a4e4;
+    float:left;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:16px;
+    width:100%;
+}
+
+.infoAdministrador{
+    color:#132530;
+    float:left;
+    font-family:'ITCAvantGardeGothicProDemi',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+
+.formAdministrador{
+    float:left;
+    margin-top:10px;
+    width:100%;
+}
+
+.td-encabezado, .tituloCotizacion, .tituloCotizacionPeq, .tituloCotizacionGra{
+    background-color:#132530;
+    color:#00a4e4;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    text-align:center;
+}
+
+.td-formulario , .td-formulario-int, .itemCotizacion, .itemCotizacionPeq, .itemCotizacionGra{
+    background-color:#00a4e4;
+    color:#ffffff;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px;
+    text-align:center;
+}
+
+.td-formulario-int{
+    height:35px;
+    padding-left:10px;
+    padding-top:2px;
+    text-align:left !important;
+}
+
+.input-normal{
+    color:#132530;
+    float:left;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width:250px;
+}
+
+.td-formulario a, .td-encabezado a, .tituloCotizacion a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+.botonAdicionarAdministrador{
+    cursor: pointer;
+    float:right;
+}
+
+.botonAdicionarAdministrador input, .boton{
+    background-image:urlhttp://smdigital.com.co/clientes/sistema_madre/images/fdoareat.png);
+    background-repeat:repeat;
+    border:0px;
+    color:#132530;
+    cursor: pointer;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+
+.tituloAdmin{
+    color:#132530;
+    float:right;
+    font-family:'ITCAvantGardeGothicProBook',"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:20px;
+    height:30px;
+    margin-right:30px;
+    margin-top:30px;
+    text-transform:uppercase;
+}
+
+#btndesarrollomedida{
+    background-color: #132530;
+    color: #00A4E4;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+#desarrollomedida{
+    background-color: #00a4e4;
+    color: white;
+    display:none;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicProBook';
+    font-style: normal;
+    font-weight: normal;
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-bk-webfont.eot');
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-bk-webfont.eot?#iefix') format('embedded-opentype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-bk-webfont.woff') format('woff'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-bk-webfont.ttf') format('truetype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-bk-webfont.svg#ITCAvantGardeGothicProBook') format('svg');
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicProDemi';
+    font-style: normal;
+    font-weight: normal;
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-demi-webfont.eot');
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-demi-webfont.eot?#iefix') format('embedded-opentype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-demi-webfont.woff') format('woff'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-demi-webfont.ttf') format('truetype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-demi-webfont.svg#ITCAvantGardeGothicProDemi') format('svg');
+}
+
+@font-face {
+    font-family: 'ITCAvantGardeGothicProMedium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-md-webfont.eot');
+    src: url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-md-webfont.eot?#iefix') format('embedded-opentype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-md-webfont.woff') format('woff'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-md-webfont.ttf') format('truetype'), url('http://smdigital.com.co/clientes/sistema_madre/fonts/itcavantgardepro-md-webfont.svg#ITCAvantGardeGothicProMedium') format('svg');
+}
+
