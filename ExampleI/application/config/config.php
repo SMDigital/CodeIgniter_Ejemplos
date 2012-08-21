@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:8080/SitioPruebas/siteSMAcademy_CI/';
+$config['base_url']	= 'http://localhost:8080/SitioPruebas/siteSMAcademy_CI/ExampleI/';
 
 /*
 |--------------------------------------------------------------------------
