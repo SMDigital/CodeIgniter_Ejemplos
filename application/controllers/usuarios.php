@@ -17,13 +17,15 @@ class Usuarios extends CI_Controller {
     }
 
     function index() {
-        $this->iniciar_sesion();
+        $is_login = $this->session->userdata('is_login');
+        if ($is_login == TRUE) {
+            redirect('home');
+        } else {
+            $this->iniciar_sesion();
+        }
     }
 
-    function iniciar_sesion() {
-        
-        echo "sdfsdf ".$this->error;
-       
+    function iniciar_sesion() {       
         $data['title'] = 'SMAcademy | Iniciar Sesión';
         $data['template'] = 'usuarios/login';
         $data['template_campos'] = array(
@@ -48,7 +50,7 @@ class Usuarios extends CI_Controller {
     }
 
     function login() {
-        $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback__verificar_usuarios');
+        $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required');
         $this->form_validation->set_rules('password', 'Contraseña', 'trim|required|md5');
 
         $this->form_validation->set_message('required', 'El campo %s es requerido');
@@ -69,10 +71,9 @@ class Usuarios extends CI_Controller {
                 );
 
                 $this->session->set_userdata($session);
-                redirect('index');
+                redirect('home');
             } else {
                 $this->error = 'Usuario o Password son incorrectos!';
-               
                 $this->iniciar_sesion();
             }
         }
@@ -85,17 +86,17 @@ class Usuarios extends CI_Controller {
             'username' => array(
                 'name' => 'usuario',
                 'id' => 'usuario',
-                'value' => ''
+                'value' => $this->input->post('usuario')
             ),
             'name' => array(
                 'name' => 'nombre_completo',
                 'id' => 'nombre_completo',
-                'value' => ''
+                'value' => $this->input->post('nombre_completo')
             ),
             'email' => array(
                 'name' => 'email',
                 'id' => 'email',
-                'value' => ''
+                'value' => $this->input->post('email')
             ),
             'password' => array(
                 'name' => 'password',
@@ -112,11 +113,9 @@ class Usuarios extends CI_Controller {
     }
 
     function registrar_usuario() {
-        $this->load->library('Guid');
-
-        $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback__verificar_usuario');
+        $this->form_validation->set_rules('usuario', 'Usuario', 'trim|required|callback_verificar_usuario');
         $this->form_validation->set_rules('nombre_completo', 'Nombres', 'trim|required');
-        $this->form_validation->set_rules('email', 'eMail', 'trim|required|valid_email|callback__verificar_email');
+        $this->form_validation->set_rules('email', 'eMail', 'trim|required|valid_email|callback_verificar_email');
         $this->form_validation->set_rules('password', 'Contraseña', 'trim|required|md5');
         $this->form_validation->set_rules('re_password', 'Confirmar contraseña', 'trim|required|matches[password]|md5');
 
@@ -132,18 +131,22 @@ class Usuarios extends CI_Controller {
             $usuario = $this->input->post('usuario');
             $nombre_completo = $this->input->post('nombre_completo');
             $email = $this->input->post('email');
-            $password = $this->input->post('re_password');
-            $codigo_verificacion = $this->Guid->generate();
+            $password = md5($this->input->post('re_password'));
 
-            $insert = $this->Usuarios_Model->registrar_usuario($usuario, $nombre_completo, $email, $password, $codigo_verificacion);
+            $insert = $this->Usuarios_Model->insertar_usuario($usuario, $nombre_completo, $email, $password);
+            
+            if ($insert) {
+                $session = array(
+                    'is_login' => TRUE,
+                    'username' => $usuario,
+                    'name' => $nombre_completo
+                );
 
-            if ($insert == TRUE) {
-                $data['title'] = 'SMAcademy CI';
-                $data['template'] = 'usuarios/home';
-
-                $this->load->view('includes/template', $data);
+                $this->session->set_userdata($session);
+                redirect('home');
             } else {
-                
+                $this->error = 'Se presento un error al guardar la info!';
+                $this->registar();
             }
         }
     }

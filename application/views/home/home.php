@@ -8,9 +8,9 @@
 
         <div class="tituloAdmin">SMAcademy CodeIgniter &REG;</div>
     </div>
-    <div id="contenido">
+    <div id="contenido" style="height: 400px;">
         <div>
-            Bienvenid@ <?php $this->session->userdata('name'); ?>
+            Bienvenid@ <?php echo $this->session->userdata('name'); ?>
         </div>
         <div>
             <?php echo anchor('usuarios/logout', 'Salir'); ?>
